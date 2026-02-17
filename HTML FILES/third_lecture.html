@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- table revision -->
+    <!-- <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2">Heading</th>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">row 1 cell 1</td>
+                <td>row 1 cell 2</td>
+                <td>row 1 cell 3</td>
+            </tr>
+            <tr>
+                <td>row 2 cell 1</td>
+                <td>row 2 cell 2</td>
+                <td>row 2 cell 3</td>
+            </tr>
+            <tr>
+                <td>row 3 cell 1</td>
+                <td>row 3 cell 2</td>
+                <td>row 3 cell 3</td>
+            </tr>
+        </tbody>
+        <tfoot></tfoot>
+    </table> -->
+
+    <!-- HTML Forms / CSS properties -->
+    <form>
+        <!-- name -->
+        <label for="name">
+            Name:
+            <input 
+                type="text" 
+                id="name" 
+                required
+                minlength="5"
+                maxlength="20"
+                spellcheck="true"
+                placeholder="Enter your name">
+        </label>
+        <br>
+
+        <!-- email -->
+        <label for="email">
+            Email:
+            <input type="email" id="email">
+        </label>
+        <br>
+
+        <!-- password -->
+        <label for="">
+            password:
+            <input type="password">
+        </label>
+        <br>
+
+        <!-- radios -->
+        <p>Gender</p>
+        <label for="">
+            Male:
+            <input type="radio" name="Gender" value="male">
+        </label>
+
+        <label for="">
+            Female:
+            <input type="radio" name="Gender" value="female">
+        </label>
+        <br>
+
+        <!-- checkboxes -->
+        <p>Subjects</p>
+        <label for="">
+            Maths:
+            <input type="checkbox" value="maths" id="">
+        </label>
+
+        <label for="">
+            Science
+            <input type="checkbox" value="science">
+        </label>
+
+        <br>
+
+        <!-- dropdown -->
+        <select>
+            <option value="" hidden>Select an option</option>
+            <option value="lahore">Lahore</option>
+            <option value="multan" disabled>Multan</option>
+            <option value="faislabad">Faislabad</option>
+        </select>
+
+        <br>
+
+        <!-- message / query -->
+        <label for="">
+            Your query:
+            <textarea 
+                rows="4" 
+                cols="30" 
+                spellcheck="true">
+            </textarea>
+        </label>
+
+        <button type="submit" disabled>Save</button>
+    </form>
+
+    <!-- <p>Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit. Fuga, delectus ducimus quas cum voluptatem dicta praesentium aut officiis architecto. Incidunt, aut? Dolor voluptatem aspernatur expedita enim aliquid corrupti a atque!</p> -->
+
+    <!-- using some properties with inline css -->
+    <!-- paragraph with blue color -->
+    <p style="color: blue; text-align: center;">This is a paragraph</p>
+</body>
+</html>
