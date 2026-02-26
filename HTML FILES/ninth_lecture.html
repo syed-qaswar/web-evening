@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .floating-img{
+            float: right;
+
+        }
+        .text{font-size: 30px;}
+
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            /* display: inline-block; */
+            float: left;
+            margin-right: 5px;
+        }
+        h1{
+            clear: left;
+            background-color: brown;
+        }
+        /* pseudo class */
+        button{
+            background-color: transparent;
+            border: none;
+            border: 2px solid rgb(73, 73, 227);
+            padding: 5px 7px;
+            border-radius: 6px;
+            /* transition: color 1.5s 3s, border 3s; */
+            transition: 1s ease
+        }
+        button:hover{
+            background-color: rgb(73, 73, 227);
+            border: 2px solid black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS Float -->
+    <div>
+        <img src="../assets/img/car.jpg" alt="" class="floating-img">
+
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quas ducimus dolore nesciunt ullam obcaecati esse placeat necessitatibus hic assumenda tenetur quia, perspiciatis, itaque est veniam velit! Magni, corrupti temporibus! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, sit. Excepturi laboriosam inventore, modi eligendi eveniet similique quos, ullam minus cupiditate, aliquid nulla. Ipsa sequi, deserunt officiis a laudantium laborum!</p>
+    </div>
+
+    <!-- three boxes in a single line using float -->
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+
+    <h1>just an heading</h1>
+
+    <!-- button with hover -->
+    <button>Hover Here</button>
+    
+</body>
+</html>
