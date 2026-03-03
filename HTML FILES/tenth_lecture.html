@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            margin-left: 50px ;
+            /* box-shadow: 0px 0px 7px 5px violet; */
+            transition: 1s ease;
+        }
+        .box:hover{
+            box-shadow: 0px 0px 7px 5px violet;
+        }
+
+        .input-field{
+            margin: 10px;
+            padding: 5px;
+            transition: .5s ease;
+        }
+        .input-field:focus{
+            outline: none;
+            border: 2px solid rgba(66, 66, 230, 0.847);
+            border-radius: 5px;
+            box-shadow: 0px 0px 4px 2px rgba(66, 66, 230, 0.728) ;
+        }
+    </style>
+</head>
+<body>
+    <!-- Box-shadow, pseudo classes -->
+    <div class="box"></div>
+
+    <!-- input field with focus -->
+    <input type="text" class="input-field" placeholder="Enter a value">
+</body>
+</html>
