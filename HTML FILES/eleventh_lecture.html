@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* topbar */
+        .topbar{
+            background-color: blue;
+            color: white;
+            padding: 10px;
+        }
+        /* navbar */
+        .navbar{
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            position: sticky;
+            top: 0; 
+            width: 100%;
+            z-index: 10;
+        }
+        .navbar h1{
+            display: inline-block;
+        }
+        .navbar nav{
+            display: inline-block;
+            margin-left: 50px;
+        }
+        nav a{
+            text-decoration: none;
+            color: white;
+            margin: 0px 10px;
+        }
+        .navbar .btn{
+            background-color: brown;
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            float: right;
+        }
+
+        .absolute{
+            border: 2px solid red;
+            position: relative;
+            margin-top: 70px;
+        }
+        .absolute div{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            display: inline-block;
+        }
+        .absolute .box2{
+            background-color: orange;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        /* relative */
+        .relative{border: 2px solid green;}
+        .relative div{
+            width: 200px;
+            height: 200px;
+            background-color: cornflowerblue;
+            display: inline-block;
+        }
+        .relative .box1{
+            position: relative;
+            z-index: 3;
+        }
+        .relative .box2{
+            background-color: brown;
+            position: relative;
+            top: 50px;
+            right: 150px;
+            z-index: 2;
+        }
+        .relative .box3{
+            background-color: blueviolet;
+            position: relative;
+            bottom: 100px;
+            right: 300px;
+        }
+
+        /* fixed */
+        .fixed{
+            width: 200px;
+            height: 200px;
+            background-color: goldenrod;
+            position: fixed;
+            top: 100px;
+            left: 400px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            This is a topbar
+        </div>
+
+    </header>
+
+    <div class="navbar">
+            <h1 class="title">My Webpage</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+
+            <a href="" class="btn">Get in touch</a>
+        </div>
+    <div class="absolute">
+        <h1>Absolute Position</h1>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+
+    <!-- relative -->
+    <div class="relative">
+        <h1>Relative Position</h1>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+
+    <!-- fixed -->
+    <div class="fixed"></div>
+    
+
+</body>
+</html>
+
+
