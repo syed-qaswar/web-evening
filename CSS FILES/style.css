@@ -11,8 +11,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
-nav a{margin: 0px 10px;}
+/* nav a{margin: 0px 10px;} */
+.navbar nav{
+    display: flex;
+    gap: 0px 15px;
+}
 .navbar a{
     color: white;
     text-decoration: none;
@@ -28,14 +33,31 @@ nav a{margin: 0px 10px;}
     border: 2px solid red;
     height: 300px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    /* flex items alignment */
     align-items: center;
+    /* flex-wrap: wrap; */
+    /* align-content: space-between; */
 }
 .container div{
     background-color: cadetblue;
     padding: 10px;
     margin: 5px;
+    /* width: 30%; */
+    /* flex-grow: 1;
+    flex-shrink: 0; */
+    flex: 1 0 150px;
+    /* flex-basis: 150px; */
+}
+.item1{
+    /* align-self: flex-end; */
+    /* flex-grow: 2; */
+    
+}
+.item2{
+    /* align-self: flex-start; */
+    /* flex-grow: 1; */
 }
 
 /* image with text */
