@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Layout using Flexbox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            /* defining / creating a var */
+            --btn-color: rgb(255, 225, 0);
+
+            /* variables for color */
+            --dark:    #0f1117;
+            --accent:  #e8a045;
+            --light:   #f5f0e8;
+            --mid:     #2a2d38;
+            --muted:   #8a8fa8;
+            --white:   #ffffff;
+            --purple: #6a22f0;
+
+        }
+        body{font-family: Arial, Helvetica, sans-serif;}
+
+        /* navbar */
+        .navbar{
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 5px 7px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .north{color: var(--accent);}
+        nav{
+            display: flex;
+            gap: 0px 10px;
+        }
+        nav a{
+            color: var(--muted);
+            text-decoration: none;
+        }
+        .nav-btn{
+            text-decoration: none;
+            background-color: var(--accent);
+            color: var(--dark);
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* main */
+        .hero{
+            background-color: var(--mid);
+            height: 200px;
+        }
+        .hero .title{color: var(--muted);}
+        .card{
+            background-color: var(--muted);
+            border-top: 2px solid var(--accent);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <!-- title -->
+            <h2 class="title">Trek<span class="north">North</span></h2>
+            <!-- nav menu -->
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Destinations</a>
+                <a href="#">Gallery</a>
+                <a href="#">About</a>
+            </nav>
+            <!-- nav button -->
+            <a href="#" class="nav-btn">Book a trip</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 class="title">Why choose us</h1>
+            <div class="card-container">
+                <div class="card">
+                    <div>⛰️</div>
+                    <h2>Expert Guides</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
