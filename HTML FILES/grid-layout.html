@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+
+        :root{
+            --orange: rgb(242, 146, 29);
+            --blue: rgba(43, 155, 240, 0.92);
+            --seagreen: rgba(14, 236, 210, 0.938);
+            --dark: rgba(41, 41, 41, 0.893);
+        }
+
+        .wrapper{
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-areas: 'hdr hdr hdr hdr hdr'
+            'side main main main aside'
+            'ftr ftr ftr ftr ftr';
+            grid-template-rows: 50px 200px 40px;
+            gap: 5px;
+        }
+        /* group selector */
+        .header,
+        .sidebar,
+        .featured,
+        .box,
+        .aside,
+        .footer{
+            border-radius: 5px;
+            text-align: center;
+        }
+        /* setting background colors */
+        .header{
+            background-color: var(--orange);
+            border-radius: 5px;
+            grid-area: hdr;
+        }
+        .sidebar{
+            background-color: var(--dark);
+            grid-area: side;
+        }
+        .main{grid-area: main;}
+        .main .content{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 95px 95px;
+            gap: 5px;
+        }
+        .main .featured{
+            background-color: var(--orange);
+            grid-column: 1 / 4;
+        }
+        .main .box{
+            background-color: var(--blue);
+            border-radius: 5px;
+        }
+        .aside{
+            background-color: var(--seagreen);
+            grid-area: aside;
+        }
+        .footer{
+            background-color: var(--dark);
+            grid-area: ftr;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">Header</header>
+        <!-- left sidebar -->
+        <aside class="sidebar">Sidebar</aside>
+        <!-- actual content -->
+        <main class="main">
+            <section class="content">
+                <div class="featured">Featured</div>
+                <div class="box">A</div>
+                <div class="box">B</div>
+                <div class="box">C</div>
+            </section>
+        </main>
+        <!-- right sidebar -->
+        <aside class="aside">Aside</aside>
+
+        <!-- Footer -->
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>
