@@ -132,7 +132,7 @@ body{
 .item6{grid-area: item6;} */
 
 
-@media(min-width: 768px){
+/* @media(min-width: 768px){
     .grid-container{
         grid-template-columns: 1fr 1fr;
     }
@@ -140,4 +140,21 @@ body{
         flex-direction: column;
     }
 
+} */
+
+/* screens smaller than 640px */
+
+@media(max-width: 640px){
+    body{background-color: blue;}
 }
+
+/* screens smaller than 480px */
+@media(max-width: 480px){
+    body{background-color: orange;}
+}
+
+
+
+
+/* screens larger than 640px */
+/* @media(min-width: 640px) */
