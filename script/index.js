@@ -146,28 +146,72 @@
 
 
 // calculator
-function calculator(operator){
-    let n1 = parseFloat(document.getElementById('num1').value)
-    let n2 = parseFloat(document.getElementById('num2').value)
-    let result = 0
+// function calculator(operator){
+//     let n1 = parseFloat(document.getElementById('num1').value)
+//     let n2 = parseFloat(document.getElementById('num2').value)
+//     let result = 0
 
-    if(n1 === "" || n2 === ""){
-        alert('Inputs should not be empty')
-    }
-    if(isNaN(n1) || isNaN(n2)){
-        alert('Only numbers are allowed')
-    }
+//     if(n1 === "" || n2 === ""){
+//         alert('Inputs should not be empty')
+//     }
+//     if(isNaN(n1) || isNaN(n2)){
+//         alert('Only numbers are allowed')
+//     }
 
-    // operations 
-    if(operator === '+') result = n1 + n2
-    else if(operator === '-') result = n1 - n2
-    else if(operator === 'x') result = n1 * n2
-    else if(operator === '/') result = n1 / n2
-    else "Operator not valid"
+//     // operations 
+//     if(operator === '+') result = n1 + n2
+//     else if(operator === '-') result = n1 - n2
+//     else if(operator === 'x') result = n1 * n2
+//     else if(operator === '/') result = n1 / n2
+//     else "Operator not valid"
 
-    document.getElementById('result').innerText = result
+//     document.getElementById('result').innerText = result
+    
+// }
 
-        
-}
+// function clearValues(){
+//     document.getElementById('num1').value = ""
+//     document.getElementById('num2').value = ""
+//     document.getElementById('result').innerText = ""
+// }
 
 // console.log(isNaN(5))
+
+function todoList(){
+    let input = document.getElementById('task-input').value
+    let taskText = input.trim()
+
+    if(taskText === ''){
+        alert('Please enter something!!')
+    }
+
+    let li = document.createElement('li')
+    li.className = 'bg-amber-300 p-2 rounded-md flex justify-between items-center my-1'
+
+    let span = document.createElement('span')
+    span.innerText = taskText
+    span.className = 'cursor-pointer'
+
+    span.onclick = function(){
+        span.className = 'line-through decoration-red-600'
+
+    }
+    
+
+    let del = document.createElement('button')
+    del.innerText = 'Delete Task'
+    del.className = 'bg-sky-300 text-sm px-2 py-1 border border-black rounded'
+
+    del.onclick = () => {
+        li.remove()
+    }
+
+    li.appendChild(span)
+    li.appendChild(del)
+    document.getElementById('task-list').appendChild(li)
+}
+
+// document.getElementById('add-task').addEventListener('click', todoList)
+document.getElementById('task-input').addEventListener('keypress', (e) =>{
+    if(e.key === 'Enter') todoList()
+})
