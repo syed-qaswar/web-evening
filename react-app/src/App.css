@@ -1,0 +1,15 @@
+/* *{margin: 0; padding: 0; box-sizing: border-box;} */
+
+.navbar{
+  display: flex;
+  background-color: rgba(64, 190, 240, 0.909);
+}
+
+/* cards */
+.card-container{
+  display: flex;
+}
+
+.card{
+  border: 2px solid orange
+}
