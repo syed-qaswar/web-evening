@@ -19,15 +19,14 @@ function App() {
       <Navbar />
       <button
         className="border-2 border-blue-400 px-2 py-1 rounded-lg"
-        onClick={() => setCount(count + 1)}
-      >
+        onClick={() => setCount(count + 1)}>
         Count {count}
       </button>
 
+      {/* show and hide with states  */}
       <button
         className="border-2 border-purple-400 px-2 py-1 ml-2 rounded-lg"
-        onClick={() => setIsVisible(!isVisible)}
-      >
+        onClick={() => setIsVisible(!isVisible)}>
         {isVisible ? "Hide" : "Show"}
       </button>
 
