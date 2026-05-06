@@ -2,6 +2,16 @@
 // read and delete data
 include 'config.php';
 
+if(isset($_GET['delete'])){
+    $id = $_GET['delete'];
+
+    $sql = "DELETE FROM `students` WHERE `id` = $id";
+
+    mysqli_query($conn, $sql);
+    header('Location:index.php');
+    exit();
+}
+
 $sql = "SELECT * FROM `students`";
 $result = mysqli_query($conn, $sql);
 
@@ -34,11 +44,13 @@ $result = mysqli_query($conn, $sql);
 
         <?php while($row = mysqli_fetch_assoc($result)): ?>
         <tr>    
-            <td><?php echo $row['id']; ?> </td>
-            <td><?php echo $row['name']; ?> </td>
-            <td><?php echo $row['email']; ?> </td>
-            <td><?php echo $row['course']; ?> </td>
-            <td><?php echo $row['created_at']; ?> </td>
+            <td><?= $row['id']; ?> </td>
+            <td><?= $row['name']; ?> </td>
+            <td><?= $row['email']; ?> </td>
+            <td><?= $row['course']; ?> </td>
+            <td><?= $row['created_at']; ?> </td>
+            <td><a href="update.php?id=<?= $row['id'] ?>">Update</a></td>
+            <td><a href="index.php?delete=<?= $row['id'] ?>" onclick="return confirm('Do you want to delete this student?')">Delete</a></td>
         </tr>
         <?php endwhile; ?>
     </table>
